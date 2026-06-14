@@ -1,0 +1,266 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Home Section -->
+<section id="home" class="d-flex align-items-center justify-content-between position-relative overflow-hidden">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 order-md-2 text-center text-md-start">
+                <h1 class="display-4 fw-bold mb-3 scroll-reveal delay-1">
+                    Hello, I'm
+                </h1>
+                <h1 class="display-1 fw-bold mb-4 scroll-reveal delay-2">
+                    Gaurav Poudel
+                </h1>
+                <p class="lead fs-4 mb-5 scroll-reveal delay-3">
+                    Seeking AI Engineer | Machine Learning Engineer Role
+                </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-5 scroll-reveal delay-4">
+                    <a href="#projects" class="btn btn-primary btn-lg me-md-2 me-md-3 scroll-reveal delay-5">
+                        View Projects
+                    </a>
+                    <a href="#contact" class="btn btn-outline-light btn-lg me-md-3 scroll-reveal delay-5">
+                        Contact Me
+                    </a>
+                    <a href="https://1drv.ms/b/c/76af1497a7190400/IQBUFVoGE-02SZTR8Co8rhtEAT2eTnjA4BPMhBY4MXXrugg" target="_blank" class="btn btn-cv btn-lg scroll-reveal delay-5">
+                        View CV
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6 order-md-1">
+                <div class="hero-img-container scroll-reveal delay-6">
+                    <img src="/static/img/profile.jpg" alt="Profile Picture" class="hero-img img-fluid rounded shadow" style="max-width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="d-flex flex-column align-items-center justify-content-center bg-dark">
+    <div class="container">
+        <h2 class="mb-4 scroll-reveal">
+            About Me
+        </h2>
+        <div class="row">
+            <div class="col-md-4 scroll-reveal delay-1">
+                <img src="/static/img/about.jpg" alt="About Me" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-8 scroll-reveal delay-2">
+           <p class="lead">
+            I am an aspiring AI Engineer with a strong passion for building intelligent systems and solving real-world problems using Machine Learning and Deep Learning. I have worked on several personal and academic AI/ML projects that helped me develop practical skills in model building, data preprocessing, and deployment basics.
+            </p>
+
+            <p>
+            I am continuously learning and improving my expertise in Python, Machine Learning, Deep Learning, and Data Science. I have hands-on experience with libraries such as TensorFlow, PyTorch, and Scikit-learn, and I enjoy applying these tools to build end-to-end projects.
+            </p>
+
+            <p>
+            My focus is on strengthening my skills in AI system design, model optimization, and real-world application development, while actively working on projects that demonstrate my growth as an AI Engineer.
+            </p>
+                    Skills
+                </h3>
+                <div class="row">
+                    <div class="col-md-6 scroll-reveal delay-4">
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i> Machine Learning (Supervised, Unsupervised, Reinforcement)</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Deep Learning (CNNs, RNNs, Transformers)</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Natural Language Processing</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> Computer Vision</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-md-6 scroll-reveal delay-5">
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i> Python, SQL</li>
+                            <li><i class="fas fa-check text-primary me-2"></i> PyTorch, Scikit-learn</li>
+                            
+                            <li><i class="fas fa-check text-primary me-2"></i> Streamlit, FastAPI, Django</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="d-flex flex-column align-items-center justify-content-center bg-dark">
+    <div class="container">
+        <h2 class="mb-5 scroll-reveal">
+            Skills & Expertise
+        </h2>
+        <div class="row g-4">
+            <!-- Technical Skills -->
+            <div class="col-md-6 scroll-reveal delay-1">
+                <h3 class="mb-4">Technical Skills</h3>
+                <div class="skill-group mb-4 scroll-reveal delay-2">
+                    <h5>Programming Languages</h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-gradient" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <small>Python</small>
+                </div>
+                <div class="skill-group mb-4 scroll-reveal delay-3">
+                    <h5>Machine Learning</h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-gradient" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <small> PyTorch / SK-Learn</small>
+                </div>
+                <div class="skill-group mb-4 scroll-reveal delay-4">
+                    <h5>Learning Cloud & DevOps</h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-gradient" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <small>AWS / Docker</small>
+                </div>
+            </div>
+            <!-- Soft Skills / Other -->
+            <div class="col-md-6 scroll-reveal delay-5">
+                <h3 class="mb-4">Tools & Technologies</h3>
+                <div class="skill-group mb-4 scroll-reveal delay-6">
+                    <h5>Data Science</h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-gradient" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <small>Pandas / NumPy / Scikit-learn</small>
+                </div>
+                <div class="skill-group mb-4 scroll-reveal delay-7">
+                    <h5>Deployment</h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-gradient" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <small>FastAPI / Streamlit</small>
+                </div>
+                <div class="skill-group mb-4 scroll-reveal delay-8">
+                    <h5>Frontend</h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-gradient" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <small>HTML / CSS / JavaScript</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="d-flex flex-column align-items-center justify-content-center bg-dark">
+    <div class="container">
+        <h2 class="mb-4 scroll-reveal">
+            Projects
+        </h2>
+        <p class="lead mb-5 scroll-reveal delay-1">
+            Here are some of my recent AI/ML projects showcasing my expertise in building intelligent systems.
+        </p>
+        <div class="row g-4">
+            <!-- Project 1 -->
+            <div class="col-md-4 scroll-reveal delay-2">
+                <div class="card h-100 bg-dark text-white border-0 tilt-card-js">
+                    <img src="/static/img/project1.jpg" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Multi_agent Generative AI System </h5>
+                        <p class="card-text">NeuroScope AI is a multi-agent Generative AI system that autonomously performs research, reads web content, generates structured reports, and critiques its own output.</p>
+                        <div class="mb-3">
+                            <span class="badge bg-primary me-1">Python</span>
+                            <span class="badge bg-primary me-1">Generative AI</span>
+                            <span class="badge bg-primary me-1">Hugging Face</span>
+                            <span class="badge bg-primary me-1">sk-learn</span>
+                        </div>
+                        <a href="https://github.com/Gauravpoudel7/NeuroScopeAI" class="btn btn-outline-light w-100" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="col-md-4 scroll-reveal delay-3">
+                <div class="card h-100 bg-dark text-white border-0 tilt-card-js">
+                    <img src="/static/img/project2.jpg" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Gym Calories Burned Prediction</h5>
+                        <p class="card-text">This project predicts calories burned based on: Experience Level, Session Duration, Fat Percentage, Workout Type, Water Intake, Average BPM (Heart Rate).  The final model uses an ensemble learning approach to achieve high accuracy and reduce overfitting.Project also contain older model used by me to learn ML</p>
+                        <div class="mb-3">
+                            <span class="badge bg-primary me-1">Python</span>
+                            <span class="badge bg-primary me-1">SK-Learn</span>
+                            <span class="badge bg-primary me-1">ML Models</span>
+                            <span class="badge bg-primary me-1">Ensemble Learning</span>
+                        </div>
+                        <a href="https://github.com/Gauravpoudel7/Gym_test_model" class="btn btn-outline-light w-100" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="col-md-4 scroll-reveal delay-4">
+                <div class="card h-100 bg-dark text-white border-0 tilt-card-js">
+                    <img src="/static/img/project3.jpg" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Movie GPT a Movie Recommendation System</h5>
+                        <p class="card-text">movie recommendation system that suggests movies based on user preferences using Machine Learning and content-based filtering techniques.Uses cosine similarity for matching movies </p>
+                        <div class="mb-3">
+                            <span class="badge bg-primary me-1">Python</span>
+                            <span class="badge bg-primary me-1">Cosine similarity</span>
+                            <span class="badge bg-primary me-1">TMDB Dataset</span>
+                            <span class="badge bg-primary me-1">NLP (TF_IDF)</span>
+                        </div>
+                        <a href="https://github.com/Gauravpoudel7/MovieGPT" class="btn btn-outline-light w-100" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="d-flex flex-column align-items-center justify-content-center bg-dark">
+    <div class="container">
+        <h2 class="mb-4 scroll-reveal">
+            Contact Me
+        </h2>
+        <p class="lead mb-4 scroll-reveal delay-1">
+            Have a project in mind or want to collaborate? Feel free to reach out!
+        </p>
+        <div class="row">
+            <div class="col-md-8 scroll-reveal delay-2">
+                {% if request.query_params.get('success') == 'true' %}
+                <div class="alert alert-success alert-dismissible fade show mb-4" role="alert">
+                    Thank you for your message! I'll get back to you soon.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endif %}
+                <form action="/submit_contact" method="POST">
+                    <div class="mb-3 scroll-reveal delay-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3 scroll-reveal delay-4">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3 scroll-reveal delay-5">
+                        <label for="message" class="form-label">Message</textarea>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg scroll-reveal delay-6">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+            <div class="col-md-4 scroll-reveal delay-3">
+                <div class="card bg-dark text-white border-0 p-4">
+                    <h5>Get in Touch</h5>
+                    <p><i class="fas fa-envelope me-2"></i> gauravpoudel1068@gmail.com</p>
+                    <p><i class="fas fa-phone me-2"></i> =977 9864271068</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Bhaktapur, Nepal</p>
+                    <hr class="bg-white">
+                    <h5>Follow Me</h5>
+                    <div class="d-flex gap-3">
+                        <a href="https://www.linkedin.com/in/gauravpoudel1068/" class="text-white fs-4"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Gauravpoudel7" class="text-white fs-4"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
