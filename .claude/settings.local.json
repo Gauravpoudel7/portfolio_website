@@ -4,7 +4,9 @@
       "Bash(taskkill *)",
       "Bash(grep *)",
       "Bash(dir *)",
-      "Bash(python -c ' *)"
+      "Bash(python -c ' *)",
+      "Bash(git ls-remote *)",
+      "Bash(git add *)"
     ]
   }
 }

@@ -1,21 +1,20 @@
 import os
 import sys
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
 from fastapi import FastAPI, Request, Form
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import uvicorn
 from dotenv import load_dotenv
+import sendgrid
+from sendgrid.helpers.mail import Mail, Email, To, Content
 
 # Load environment variables from .env file in the app directory
 dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
 load_dotenv(dotenv_path)
 
-# Debug: print whether email config is loaded (do not print password)
-print(f"[DEBUG] GMAIL_USER loaded: {bool(os.getenv('GMAIL_USER'))}")
+# Debug: print whether email config is loaded (do not print key)
+print(f"[DEBUG] SENDGRID_API_KEY loaded: {bool(os.getenv('SENDGRID_API_KEY'))}")
 
 
 
@@ -64,62 +63,32 @@ async def submit_contact(
     email: str = Form(...),
     message: str = Form(...)
 ):
-    # Create message
-    msg = MIMEMultipart()
-    msg['From'] = os.getenv('GMAIL_USER', 'your-email@gmail.com')  # Sender email (configure via GMAIL_USER env var)
-    msg['To'] = 'gauravpoudel1068@gmail.com'   # Recipient email - fixed to user's Gmail as requested
-    msg['Subject'] = f"New Contact Form Submission from {name}"
-
-    # Email body
-    body = f"""
-    New contact form submission:
-
-    Name: {name}
-    Email: {email}
-    Message: {message}
-    """
-    msg.attach(MIMEText(body, 'plain'))
+    # Create email content
+    from_email = Email(os.getenv('GMAIL_USER', 'your-email@gmail.com'))  # Sender email
+    to_email = To('gauravpoudel1068@gmail.com')  # Recipient email
+    subject = f"New Contact Form Submission from {name}"
+    content = Content(
+        "text/plain",
+        f"New contact form submission:\n\nName: {name}\nEmail: {email}\nMessage: {message}"
+    )
+    mail = Mail(from_email, to_email, subject, content)
 
     try:
-        # Connect to Gmail SMTP server with timeout
-        server = smtplib.SMTP('smtp.gmail.com', 587, timeout=10)
-        server.starttls()  # Enable security
-
-        # Login using environment variables for security
-        gmail_user = os.getenv('GMAIL_USER')
-        gmail_password = os.getenv('GMAIL_APP_PASSWORD')  # Use App Password for Gmail
-
-        # Remove any accidental spaces from password
-        if gmail_password:
-            gmail_password = gmail_password.replace(' ', '')
-
-        if gmail_user and gmail_password:
-            server.login(gmail_user, gmail_password)
-            text = msg.as_string()
-            server.sendmail(gmail_user, gmail_user, text)
-            server.quit()
-            print(f"Contact form submission from {name} sent to {gmail_user}")
+        # Send via SendGrid
+        sg = sendgrid.SendGridAPIClient(api_key=os.getenv('SENDGRID_API_KEY'))
+        response = sg.send(mail)
+        if 200 <= response.status_code < 300:
+            print(f"Contact form submission from {name} sent via SendGrid. Status code: {response.status_code}")
         else:
-            # Fallback: print to console if credentials not set
-            print(f"Gmail credentials not configured. Submission from {name}:")
-            print(body)
-
-    except smtplib.SMTPAuthenticationError as e:
-        print(f"SMTP Authentication Error: {e}")
-        print("Please check your Gmail App Password and ensure 2FA is enabled.")
-        # Fallback: store in memory as before
-        submission = {"name": name, "email": email, "message": message}
-        form_submissions.append(submission)
-        print(f"Stored submission in memory as fallback: {submission}")
-    except smtplib.SMTPConnectError as e:
-        print(f"SMTP Connection Error: {e}")
-        print("Check your internet connection or firewall settings.")
-        # Fallback: store in memory as before
-        submission = {"name": name, "email": email, "message": message}
-        form_submissions.append(submission)
-        print(f"Stored submission in memory as fallback: {submission}")
+            # Log the error details from SendGrid
+            error_msg = f"SendGrid returned status code {response.status_code}"
+            if hasattr(response, 'body'):
+                error_msg += f": {response.body}"
+            print(error_msg)
+            # Raise an exception to trigger the fallback
+            raise Exception(error_msg)
     except Exception as e:
-        print(f"Error sending email: {e}")
+        print(f"Error sending email via SendGrid: {e}")
         # Fallback: store in memory as before
         submission = {"name": name, "email": email, "message": message}
         form_submissions.append(submission)
