@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(taskkill *)",
-      "Bash(grep *)"
+      "Bash(grep *)",
+      "Bash(dir *)",
+      "Bash(python -c ' *)"
     ]
   }
 }
