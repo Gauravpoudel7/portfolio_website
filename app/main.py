@@ -10,8 +10,12 @@ from fastapi.templating import Jinja2Templates
 import uvicorn
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
-load_dotenv()
+# Load environment variables from .env file in the app directory
+dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
+# Debug: print whether email config is loaded (do not print password)
+print(f"[DEBUG] GMAIL_USER loaded: {bool(os.getenv('GMAIL_USER'))}")
 
 
 
@@ -77,13 +81,17 @@ async def submit_contact(
     msg.attach(MIMEText(body, 'plain'))
 
     try:
-        # Connect to Gmail SMTP server
-        server = smtplib.SMTP('smtp.gmail.com', 587)
+        # Connect to Gmail SMTP server with timeout
+        server = smtplib.SMTP('smtp.gmail.com', 587, timeout=10)
         server.starttls()  # Enable security
 
         # Login using environment variables for security
         gmail_user = os.getenv('GMAIL_USER')
         gmail_password = os.getenv('GMAIL_APP_PASSWORD')  # Use App Password for Gmail
+
+        # Remove any accidental spaces from password
+        if gmail_password:
+            gmail_password = gmail_password.replace(' ', '')
 
         if gmail_user and gmail_password:
             server.login(gmail_user, gmail_password)
@@ -96,6 +104,20 @@ async def submit_contact(
             print(f"Gmail credentials not configured. Submission from {name}:")
             print(body)
 
+    except smtplib.SMTPAuthenticationError as e:
+        print(f"SMTP Authentication Error: {e}")
+        print("Please check your Gmail App Password and ensure 2FA is enabled.")
+        # Fallback: store in memory as before
+        submission = {"name": name, "email": email, "message": message}
+        form_submissions.append(submission)
+        print(f"Stored submission in memory as fallback: {submission}")
+    except smtplib.SMTPConnectError as e:
+        print(f"SMTP Connection Error: {e}")
+        print("Check your internet connection or firewall settings.")
+        # Fallback: store in memory as before
+        submission = {"name": name, "email": email, "message": message}
+        form_submissions.append(submission)
+        print(f"Stored submission in memory as fallback: {submission}")
     except Exception as e:
         print(f"Error sending email: {e}")
         # Fallback: store in memory as before
