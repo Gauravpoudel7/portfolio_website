@@ -394,7 +394,7 @@ section.parallax::before {
 
 /* INPUTS */
 .form-control {
-    background: rgba(240,220,255,0.04);
+    background: rgba(27, 26, 26, 0.985);
     border: 1px solid var(--border-color);
     color: var(--text-main);
     border-radius: 10px;
@@ -403,8 +403,8 @@ section.parallax::before {
 
 .form-control:focus {
     border-color: var(--accent);
-    box-shadow: 0 0 15px rgba(139,92,246,0.25);
-    background: rgba(240,220,255,0.06);
+    box-shadow: 0 0 15px rgba(245, 245, 246, 0.25);
+    background: rgba(255, 255, 255, 0.996);
 }
 
 /* SKILLS SECTION */
