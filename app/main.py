@@ -11,9 +11,7 @@ import uvicorn
 
 
 app = FastAPI(title="AI Engineer Portfolio")
-@app.get("/")
-def home():
-    return {"message": "Portfolio is Live 🚀"}
+
 
 
 # Get the base directory of the current file
