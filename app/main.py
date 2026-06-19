@@ -40,12 +40,23 @@ templates = Jinja2Templates(directory=os.path.join(BASE_DIR, "templates"))
 # installed Jinja2/Starlette combo (cache key contention).
 templates.env.cache = None
 
+
+def render(request: Request, name: str, context: dict | None = None) -> HTMLResponse:
+    """Render a template, guaranteeing the ``request`` key is in context.
+
+    Different Starlette versions either auto-inject ``request`` into the
+    template context or require it explicitly — this helper covers both.
+    """
+    ctx = dict(context or {})
+    ctx.setdefault("request", request)
+    return templates.TemplateResponse(request, name, ctx)
+
 # In-memory storage for form submissions (for demo; in production use a database)
 form_submissions = []
 
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
-    return templates.TemplateResponse(request, "index.html", {"request": request, "title": "Home"})
+    return render(request, "index.html", {"title": "Home"})
 
 @app.get("/about", response_class=HTMLResponse)
 async def about(request: Request):
