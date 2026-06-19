@@ -45,7 +45,7 @@ form_submissions = []
 
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
-    return templates.TemplateResponse(request, "index.html", {"title": "Home"})
+    return templates.TemplateResponse(request, "index.html", {"request": request, "title": "Home"})
 
 @app.get("/about", response_class=HTMLResponse)
 async def about(request: Request):
