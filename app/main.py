@@ -36,13 +36,16 @@ app.mount("/static", StaticFiles(directory=os.path.join(BASE_DIR, "static")), na
 
 # Templates
 templates = Jinja2Templates(directory=os.path.join(BASE_DIR, "templates"))
+# Disable Jinja's template cache to avoid a dict-unhashable bug in the
+# installed Jinja2/Starlette combo (cache key contention).
+templates.env.cache = None
 
 # In-memory storage for form submissions (for demo; in production use a database)
 form_submissions = []
 
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request, "title": "Home"})
+    return templates.TemplateResponse(request, "index.html", {"title": "Home"})
 
 @app.get("/about", response_class=HTMLResponse)
 async def about(request: Request):

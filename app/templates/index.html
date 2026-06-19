@@ -1,207 +1,184 @@
 {% extends "base.html" %}
 
 {% block content %}
-<!-- Home Section -->
-<section id="home" class="d-flex align-items-center justify-content-between position-relative overflow-hidden">
+
+<!-- ============ HERO ============ -->
+<section id="home" class="hero">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6 order-md-2 text-center text-md-start">
-                <h1 class="display-4 fw-bold mb-3 scroll-reveal delay-1">
-                    Hello, I'm
+        <div class="hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge reveal" data-reveal="fade-up">
+                    <span class="hero-badge-dot" aria-hidden="true"></span>
+                    <span>Open to opportunities · 2026</span>
+                </div>
+
+                <h1 class="hero-title reveal" data-reveal="fade-up" data-reveal-delay="80">
+                    Building the <span class="text-gradient">intelligent systems</span> of tomorrow.
                 </h1>
-                <h1 class="display-1 fw-bold mb-4 scroll-reveal delay-2">
-                    Gaurav Poudel
-                </h1>
-                <p class="lead fs-4 mb-5 scroll-reveal delay-3">
-                    Seeking AI Engineer | Machine Learning Engineer Role
+
+                <p class="hero-subtitle reveal" data-reveal="fade-up" data-reveal-delay="160">
+                    I'm <strong>Gaurav Poudel</strong> — an AI Engineer designing  machine learning, deep learning, and generative AI products that turn complex data into real-world impact.
                 </p>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-5 scroll-reveal delay-4">
-                    <a href="#projects" class="btn btn-primary btn-lg me-md-2 me-md-3 scroll-reveal delay-5">
-                        View Projects
+
+                <div class="hero-actions reveal" data-reveal="fade-up" data-reveal-delay="240">
+                    <a href="#work" class="btn btn-primary btn-lg magnetic">
+                        <span>View Selected Work</span>
+                        <i class="ph ph-arrow-right" aria-hidden="true"></i>
                     </a>
-                    <a href="#contact" class="btn btn-outline-light btn-lg me-md-3 scroll-reveal delay-5">
-                        Contact Me
-                    </a>
-                    <a href="https://1drv.ms/b/c/76af1497a7190400/IQBUFVoGE-02SZTR8Co8rhtEAT2eTnjA4BPMhBY4MXXrugg" target="_blank" class="btn btn-cv btn-lg scroll-reveal delay-5">
-                        View CV
+                    <a href="https://1drv.ms/b/c/76af1497a7190400/IQBUFVoGE-02SZTR8Co8rhtEAT2eTnjA4BPMhBY4MXXrugg" target="_blank" rel="noopener" class="btn btn-ghost btn-lg magnetic">
+                        <i class="ph ph-file-text" aria-hidden="true"></i>
+                        <span>Download CV</span>
                     </a>
                 </div>
-            </div>
-            <div class="col-md-6 order-md-1">
-                <div class="hero-img-container scroll-reveal delay-6">
-                    <img src="/static/img/profile.jpg" alt="Profile Picture" class="hero-img img-fluid rounded-circle shadow">
+
+                <div class="hero-meta reveal" data-reveal="fade-up" data-reveal-delay="320">
+                    <div class="hero-meta-item">
+                        <i class="ph-fill ph-check-circle"></i>
+                        <span>Available worldwide · Remote</span>
+                    </div>
+                    <div class="hero-meta-item">
+                        <i class="ph-fill ph-lightning"></i>
+                        <span>Avg. response &lt; 24h</span>
+                    </div>
                 </div>
+            </div>
+
+            <div class="hero-visual reveal" data-reveal="zoom-in" data-reveal-delay="200">
+                <div class="hero-orb">
+                    <div class="hero-orb-ring"></div>
+                    <div class="hero-orb-ring hero-orb-ring-2"></div>
+                    <div class="hero-orb-core">
+                        <img src="/static/img/profile.jpg" alt="Gaurav Poudel" class="hero-avatar" loading="eager" decoding="async">
+                    </div>
+                    <!-- Floating chips -->
+                    <div class="hero-chip hero-chip-1">
+                        <i class="ph-fill ph-brain"></i>
+                        <span>Deep Learning</span>
+                    </div>
+                    <div class="hero-chip hero-chip-2">
+                        <i class="ph-fill ph-code"></i>
+                        <span>Python · PyTorch</span>
+                    </div>
+                    <div class="hero-chip hero-chip-3">
+                        <i class="ph-fill ph-graph"></i>
+                        <span>LLM · GenAI</span>
+                    </div>
+                    <div class="hero-chip hero-chip-4">
+                        <i class="ph-fill ph-rocket"></i>
+                        <span>Simple DeploymentL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trust bar / logos -->
+        <div class="trust-bar reveal" data-reveal="fade-up" data-reveal-delay="400">
+            <p class="trust-bar-label">Trusted tooling & frameworks</p>
+            <div class="trust-bar-logos">
+                <div class="trust-logo">Python</div>
+                <div class="trust-logo">PyTorch</div>
+                <div class="trust-logo">StreamLit</div>
+                <div class="trust-logo">Hugging Face</div>
+                <div class="trust-logo">FastAPI</div>
+                <div class="trust-logo">Docker</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Marquee -->
+    <div class="hero-marquee" aria-hidden="true">
+        <div class="hero-marquee-track">
+            <span>Machine Learning</span><span class="dot">◆</span>
+            <span>Deep Learning</span><span class="dot">◆</span>
+            <span>Generative AI</span><span class="dot">◆</span>
+            <span>Computer Vision</span><span class="dot">◆</span>
+            <span>NLP &amp; Transformers</span><span class="dot">◆</span>
+            <span>Python · SQL</span><span class="dot">◆</span>
+            <span>FastAPI · Streamlit</span><span class="dot">◆</span>
+            <span>Machine Learning</span><span class="dot">◆</span>
+            <span>Deep Learning</span><span class="dot">◆</span>
+            <span>Generative AI</span><span class="dot">◆</span>
+            <span>Computer Vision</span><span class="dot">◆</span>
+            <span>NLP &amp; Transformers</span><span class="dot">◆</span>
+            <span>Python · SQL</span><span class="dot">◆</span>
+            <span>FastAPI · Streamlit</span><span class="dot">◆</span>
+        </div>
+    </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card reveal" data-reveal="fade-up">
+                <div class="stat-value" data-count="8+">5+</div>
+                <div class="stat-label">CS/AI/ML projects </div>
+            </div>
+            <div class="stat-card reveal" data-reveal="fade-up" data-reveal-delay="80">
+                <div class="stat-value" data-count="4">Learning</div>
+                <div class="stat-label">Deployed Projects ML/AI</div>
+            </div>
+            <div class="stat-card reveal" data-reveal="fade-up" data-reveal-delay="160">
+                <div class="stat-value" data-count="1">0+</div>
+                <div class="stat-label">Gaining experience  with ML</div>
+            </div>
+            <div class="stat-card reveal" data-reveal="fade-up" data-reveal-delay="240">
+                <div class="stat-value">∞</div>
+                <div class="stat-label">Curiosity for the craft</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- About Section -->
-<section id="about" class="d-flex flex-column align-items-center justify-content-center bg-dark">
+<!-- ============ ABOUT / FEATURE STORY ============ -->
+<section id="about" class="section">
     <div class="container">
-        <h2 class="mb-4 scroll-reveal">
-            About Me
-        </h2>
-        <div class="row">
-            <div class="col-md-4 scroll-reveal delay-1">
-                <img src="/static/img/about.jpg" alt="About Me" class="img-fluid rounded shadow">
-            </div>
-            <div class="col-md-8 scroll-reveal delay-2">
-           <p class="lead">
-            I am an aspiring AI Engineer with a strong passion for building intelligent systems and solving real-world problems using Machine Learning and Deep Learning. I have worked on several personal and academic AI/ML projects that helped me develop practical skills in model building, data preprocessing, and deployment basics.
-            </p>
-
-            <p>
-            I am continuously learning and improving my expertise in Python, Machine Learning, Deep Learning, and Data Science. I have hands-on experience with libraries such as TensorFlow, PyTorch, and Scikit-learn, and I enjoy applying these tools to build end-to-end projects.
-            </p>
-
-            <p>
-            My focus is on strengthening my skills in AI system design, model optimization, and real-world application development, while actively working on projects that demonstrate my growth as an AI Engineer.
-            </p>
-                <h3>Skills</h3>
-                <div class="row">
-                    <div class="col-md-6 scroll-reveal delay-4">
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-primary me-2"></i> Machine Learning (Supervised, Unsupervised, Reinforcement)</li>
-                            <li><i class="fas fa-check text-primary me-2"></i> Deep Learning (CNNs, RNNs, Transformers)</li>
-                            <li><i class="fas fa-check text-primary me-2"></i> Natural Language Processing</li>
-                            <li><i class="fas fa-check text-primary me-2"></i> Computer Vision</li>
-                            
-                        </ul>
-                    </div>
-                    <div class="col-md-6 scroll-reveal delay-5">
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-primary me-2"></i> Python, SQL</li>
-                            <li><i class="fas fa-check text-primary me-2"></i> PyTorch, Scikit-learn</li>
-                            
-                            <li><i class="fas fa-check text-primary me-2"></i> Streamlit, FastAPI, Django</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="section-head reveal" data-reveal="fade-up">
+            <span class="eyebrow">About</span>
+            <h2 class="section-title">An engineer who <span class="text-gradient">treats AI as a product</span>, not a demo.</h2>
+            <p class="section-lede"> building end-to-end intelligent systems — from data to deployment — with a relentless focus on real-world impact.</p>
         </div>
-    </div>
-</section>
 
-<!-- Skills Section -->
-<section id="skills" class="d-flex flex-column align-items-center justify-content-center bg-dark">
-    <div class="container">
-        <h2 class="mb-5 scroll-reveal">
-            Skills & Expertise
-        </h2>
-        <div class="row g-4">
-            <!-- Technical Skills -->
-            <div class="col-md-6 scroll-reveal delay-1">
-                <h3 class="mb-4">Technical Skills</h3>
-                <div class="skill-group mb-4 scroll-reveal delay-2">
-                    <h5>Programming Languages</h5>
-                    <div class="progress">
-                        <div class="progress-bar bg-gradient" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <small>Python</small>
+        <div class="about-grid">
+            <div class="about-photo reveal" data-reveal="fade-right">
+                <div class="about-photo-frame">
+                    <img src="/static/img/about.jpg" alt="Gaurav Poudel at work" loading="lazy" decoding="async">
                 </div>
-                <div class="skill-group mb-4 scroll-reveal delay-3">
-                    <h5>Machine Learning</h5>
-                    <div class="progress">
-                        <div class="progress-bar bg-gradient" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <small> PyTorch / SK-Learn</small>
-                </div>
-                <div class="skill-group mb-4 scroll-reveal delay-4">
-                    <h5>Learning Cloud & DevOps</h5>
-                    <div class="progress">
-                        <div class="progress-bar bg-gradient" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <small>AWS / Docker</small>
-                </div>
+                <div class="about-photo-decor" aria-hidden="true"></div>
             </div>
-            <!-- Soft Skills / Other -->
-            <div class="col-md-6 scroll-reveal delay-5">
-                <h3 class="mb-4">Tools & Technologies</h3>
-                <div class="skill-group mb-4 scroll-reveal delay-6">
-                    <h5>Data Science</h5>
-                    <div class="progress">
-                        <div class="progress-bar bg-gradient" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <small>Pandas / NumPy / Scikit-learn</small>
-                </div>
-                <div class="skill-group mb-4 scroll-reveal delay-7">
-                    <h5>Deployment</h5>
-                    <div class="progress">
-                        <div class="progress-bar bg-gradient" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <small>FastAPI / Streamlit</small>
-                </div>
-                <div class="skill-group mb-4 scroll-reveal delay-8">
-                    <h5>Frontend</h5>
-                    <div class="progress">
-                        <div class="progress-bar bg-gradient" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <small>HTML / CSS / JavaScript</small>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+            <div class="about-copy">
+                <p class="reveal" data-reveal="fade-up">
+                    I'm an aspiring AI Engineer with a deep passion for building intelligent systems and solving real-world problems using Machine Learning and Deep Learning. Across personal and academic projects, I've developed practical skills in model architecture, data preprocessing, evaluation, and simple deployment.
+                </p>
+                <p class="reveal" data-reveal="fade-up" data-reveal-delay="80">
+                    I work fluently across Python, PyTorch, and Scikit-learn — and I love taking ideas from notebook to production. My current focus is on AI system design, model optimization, and shipping software that people actually use.
+                </p>
 
-<!-- Projects Section -->
-<section id="projects" class="d-flex flex-column align-items-center justify-content-center bg-dark">
-    <div class="container">
-        <h2 class="mb-4 scroll-reveal">
-            Projects
-        </h2>
-        <p class="lead mb-5 scroll-reveal delay-1">
-            Here are some of my recent AI/ML projects showcasing my expertise in building intelligent systems.
-        </p>
-        <div class="row g-4">
-            <!-- Project 1 -->
-            <div class="col-md-4 scroll-reveal delay-2">
-                <div class="card h-100 bg-dark text-white border-0 tilt-card-js">
-                    <img src="/static/img/project1.jpg" class="card-img-top" alt="Project 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Multi_agent Generative AI System </h5>
-                        <p class="card-text">NeuroScope AI is a multi-agent Generative AI system that autonomously performs research, reads web content, generates structured reports, and critiques its own output.</p>
-                        <div class="mb-3">
-                            <span class="badge bg-primary me-1">Python</span>
-                            <span class="badge bg-primary me-1">Generative AI</span>
-                            <span class="badge bg-primary me-1">Hugging Face</span>
-                            <span class="badge bg-primary me-1">sk-learn</span>
+                <!-- Timeline -->
+                <div class="timeline">
+                    <div class="timeline-item reveal" data-reveal="fade-up">
+                        <div class="timeline-marker" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-meta">2026 jan — April</div>
+                            <h4>Data analyst intern</h4>
+                            <p>During my data analyst internship, I mastered data preprocessing pipelines—including handling missing data, scaling, and categorical encoding—while leveraging evaluation metrics and clustering techniques to translate raw datasets into actionable business insights.</p>
                         </div>
-                        <a href="https://github.com/Gauravpoudel7/NeuroScopeAI" class="btn btn-outline-light w-100" target="_blank">View on GitHub</a>
                     </div>
-                </div>
-            </div>
-            <!-- Project 2 -->
-            <div class="col-md-4 scroll-reveal delay-3">
-                <div class="card h-100 bg-dark text-white border-0 tilt-card-js">
-                    <img src="/static/img/project2.jpg" class="card-img-top" alt="Project 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Gym Calories Burned Prediction</h5>
-                        <p class="card-text">This project predicts calories burned based on: Experience Level, Session Duration, Fat Percentage, Workout Type, Water Intake, Average BPM (Heart Rate).  The final model uses an ensemble learning approach to achieve high accuracy and reduce overfitting.Project also contain older model used by me to learn ML</p>
-                        <div class="mb-3">
-                            <span class="badge bg-primary me-1">Python</span>
-                            <span class="badge bg-primary me-1">SK-Learn</span>
-                            <span class="badge bg-primary me-1">ML Models</span>
-                            <span class="badge bg-primary me-1">Ensemble Learning</span>
+                    <div class="timeline-item reveal" data-reveal="fade-up" data-reveal-delay="80">
+                        <div class="timeline-marker" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-meta">May 2026 — present</div>
+                            <h4>AI/ML Course · Leroy AI, Kathmandu</h4>
+                            <p>Developed predictive models, owned feature engineering, and collaborated on ML pipelines and Learned  deployment.</p>
                         </div>
-                        <a href="https://github.com/Gauravpoudel7/Gym_test_model" class="btn btn-outline-light w-100" target="_blank">View on GitHub</a>
                     </div>
-                </div>
-            </div>
-            <!-- Project 3 -->
-            <div class="col-md-4 scroll-reveal delay-4">
-                <div class="card h-100 bg-dark text-white border-0 tilt-card-js">
-                    <img src="/static/img/project3.jpg" class="card-img-top" alt="Project 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Movie GPT a Movie Recommendation System</h5>
-                        <p class="card-text">movie recommendation system that suggests movies based on user preferences using Machine Learning and content-based filtering techniques.Uses cosine similarity for matching movies </p>
-                        <div class="mb-3">
-                            <span class="badge bg-primary me-1">Python</span>
-                            <span class="badge bg-primary me-1">Cosine similarity</span>
-                            <span class="badge bg-primary me-1">TMDB Dataset</span>
-                            <span class="badge bg-primary me-1">NLP (TF_IDF)</span>
+                    <div class="timeline-item reveal" data-reveal="fade-up" data-reveal-delay="160">
+                        <div class="timeline-marker" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-meta">2020 — 2025</div>
+                            <h4>Bachelors in Computer Application · Tribhuvan University</h4>
+                            <p>Thesis on Future prediction model. Coursework spanning ML, algorithms, databases, and software engineering.</p>
                         </div>
-                        <a href="https://github.com/Gauravpoudel7/MovieGPT" class="btn btn-outline-light w-100" target="_blank">View on GitHub</a>
                     </div>
                 </div>
             </div>
@@ -209,57 +186,318 @@
     </div>
 </section>
 
-<!-- Contact Section -->
-<section id="contact" class="d-flex flex-column align-items-center justify-content-center bg-dark">
+<!-- ============ EXPERTISE / FEATURES ============ -->
+<section id="expertise" class="section section-alt">
     <div class="container">
-        <h2 class="mb-4 scroll-reveal">
-            Contact Me
-        </h2>
-        <p class="lead mb-4 scroll-reveal delay-1">
-            Have a project in mind or want to collaborate? Feel free to reach out!
-        </p>
-        <div class="row">
-            <div class="col-md-8 scroll-reveal delay-2">
+        <div class="section-head reveal" data-reveal="fade-up">
+            <span class="eyebrow">Expertise</span>
+            <h2 class="section-title"> AI implementation, from <span class="text-gradient">data to deployment</span>.</h2>
+            <p class="section-lede">A toolkit sharpened across research, engineering, and simple product — built to provide intelligent systems that work in the wild.</p>
+        </div>
+
+        <div class="features-grid">
+            <article class="feature-card reveal" data-reveal="fade-up">
+                <div class="feature-icon">
+                    <i class="ph-bold ph-brain"></i>
+                </div>
+                <h3>Deep Learning</h3>
+                <p>CNNs, RNNs, Transformers — designed and tuned for production. Transfer learning, attention mechanisms, and custom architectures.</p>
+                <ul class="feature-tags">
+                    <li>PyTorch</li>
+                    <li>TensorFlow</li>
+                    <li>Hugging Face</li>
+                </ul>
+            </article>
+            <article class="feature-card reveal" data-reveal="fade-up" data-reveal-delay="80">
+                <div class="feature-icon">
+                    <i class="ph-bold ph-graph"></i>
+                </div>
+                <h3>Machine Learning</h3>
+                <p>Supervised, unsupervised, and reinforcement learning pipelines with rigorous evaluation, ensembling, and feature engineering.</p>
+                <ul class="feature-tags">
+                    <li>Scikit-learn</li>
+                    <li>XGBoost</li>
+                    <li>Pandas</li>
+                </ul>
+            </article>
+            <article class="feature-card reveal" data-reveal="fade-up" data-reveal-delay="160">
+                <div class="feature-icon">
+                    <i class="ph-bold ph-sparkle"></i>
+                </div>
+                <h3>Generative AI</h3>
+                <p>Multi-agent systems, RAG pipelines, prompt engineering, and LLM orchestration that turn language models into reliable products.</p>
+                <ul class="feature-tags">
+                    <li>LLMs</li>
+                    <li>RAG</li>
+                    <li>Agents</li>
+                </ul>
+            </article>
+            <article class="feature-card reveal" data-reveal="fade-up" data-reveal-delay="240">
+                <div class="feature-icon">
+                    <i class="ph-bold ph-eye"></i>
+                </div>
+                <h3>Learning Computer Vision</h3>
+                <p>Image classification, object detection, segmentation — built with OpenCV and modern CV backbones for real-world datasets.</p>
+                <ul class="feature-tags">
+                    <li>OpenCV</li>
+                    <li>YOLO</li>
+                    <li>CNN</li>
+                </ul>
+            </article>
+            <article class="feature-card reveal" data-reveal="fade-up" data-reveal-delay="320">
+                <div class="feature-icon">
+                    <i class="ph-bold ph-code"></i>
+                </div>
+                <h3>AI helped Production </h3>
+                <p>REST APIs, containerization, and Streamlit — can turn prototypes into reliable, observable, scalable services using AI(ClaudeCode).</p>
+                <ul class="feature-tags">
+                    <li>FastAPI</li>
+                    <li>Docker</li>
+                    <li>Streamlit</li>
+                </ul>
+            </article>
+            <article class="feature-card reveal" data-reveal="fade-up" data-reveal-delay="400">
+                <div class="feature-icon">
+                    <i class="ph-bold ph-chart-line-up"></i>
+                </div>
+                <h3>Data Science</h3>
+                <p>Exploratory analysis, statistical reasoning, and crisp visualizations — the foundation that makes every model better.</p>
+                <ul class="feature-tags">
+                    <li>NumPy</li>
+                    <li>Pandas</li>
+                    <li>Matplotlib</li>
+                </ul>
+            </article>
+        </div>
+
+        <!-- Skill bars -->
+        <div class="skills">
+            <div class="skill reveal" data-reveal="fade-up">
+                <div class="skill-head"><span>Python &amp; ML Engineering</span><span>95%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-fill="95"></div></div>
+            </div>
+            <div class="skill reveal" data-reveal="fade-up" data-reveal-delay="80">
+                <div class="skill-head"><span>Deep Learning (PyTorch )</span><span>90%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-fill="90"></div></div>
+            </div>
+            <div class="skill reveal" data-reveal="fade-up" data-reveal-delay="160">
+                <div class="skill-head"><span>Cloud &amp; DevOps (AWS · Docker)</span><span> 50%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-fill="50"></div></div>
+            </div>
+            <div class="skill reveal" data-reveal="fade-up" data-reveal-delay="240">
+                <div class="skill-head"><span>Deployment (FastAPI · Streamlit)</span><span>88%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-fill="88"></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ WORK / PROJECTS ============ -->
+<section id="work" class="section">
+    <div class="container">
+        <div class="section-head reveal" data-reveal="fade-up">
+            <span class="eyebrow">Selected Work</span>
+            <h2 class="section-title">Recent <span class="text-gradient">case studies</span>.</h2>
+            <p class="section-lede">A snapshot of recent AI/ML systems I've designed, trained, and shipped.</p>
+        </div>
+
+        <div class="projects-grid">
+            <article class="project-card reveal tilt-card" data-reveal="fade-up">
+                <div class="project-image">
+                    <img src="/static/img/project1.jpg" alt="NeuroScope AI — multi-agent generative AI" loading="lazy" decoding="async">
+                    <div class="project-shine" aria-hidden="true"></div>
+                </div>
+                <div class="project-body">
+                    <div class="project-tags">
+                        <span>Generative AI</span>
+                        <span>Multi-agent</span>
+                    </div>
+                    <h3>NeuroScope AI</h3>
+                    <p>An autonomous multi-agent Generative AI system that performs research, reads web content, generates structured reports, and critiques its own output.</p>
+                    <a href="https://github.com/Gauravpoudel7/NeuroScopeAI" target="_blank" rel="noopener" class="project-link">
+                        View on GitHub <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="project-card reveal tilt-card" data-reveal="fade-up" data-reveal-delay="80">
+                <div class="project-image">
+                    <img src="/static/img/project2.jpg" alt="Gym calories burned prediction" loading="lazy" decoding="async">
+                    <div class="project-shine" aria-hidden="true"></div>
+                </div>
+                <div class="project-body">
+                    <div class="project-tags">
+                        <span>ML</span>
+                        <span>Ensemble</span>
+                    </div>
+                    <h3>Gym Calories Burned Predictor</h3>
+                    <p>Predicts calories burned from experience, session duration, fat %, workout type, water intake, and BPM using an ensemble approach for high accuracy.</p>
+                    <a href="https://github.com/Gauravpoudel7/Gym_test_model" target="_blank" rel="noopener" class="project-link">
+                        View on GitHub <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="project-card reveal tilt-card" data-reveal="fade-up" data-reveal-delay="160">
+                <div class="project-image">
+                    <img src="/static/img/project3.jpg" alt="MovieGPT — recommendation system" loading="lazy" decoding="async">
+                    <div class="project-shine" aria-hidden="true"></div>
+                </div>
+                <div class="project-body">
+                    <div class="project-tags">
+                        <span>NLP</span>
+                        <span>Recommender</span>
+                    </div>
+                    <h3>MovieGPT</h3>
+                    <p>A content-based movie recommender using TF-IDF and cosine similarity over the TMDB dataset to surface matches that actually feel right.</p>
+                    <a href="https://github.com/Gauravpoudel7/MovieGPT" target="_blank" rel="noopener" class="project-link">
+                        View on GitHub <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-head reveal" data-reveal="fade-up">
+            <span class="eyebrow">Process</span>
+            <h2 class="section-title">From problem to <span class="text-gradient">production AI</span>.</h2>
+            <p class="section-lede">A pragmatic, iterative workflow tuned for shipping AI that actually delivers.</p>
+        </div>
+        <div class="process-grid">
+            <div class="process-step reveal" data-reveal="fade-up">
+                <div class="process-num">01</div>
+                <h3>Discover</h3>
+                <p>Frame the right problem. Audit data, define success metrics, and align on what good looks like.</p>
+            </div>
+            <div class="process-step reveal" data-reveal="fade-up" data-reveal-delay="80">
+                <div class="process-num">02</div>
+                <h3>Design</h3>
+                <p>Choose architectures deliberately. Engineer features, set baselines, and map the eval surface.</p>
+            </div>
+            <div class="process-step reveal" data-reveal="fade-up" data-reveal-delay="160">
+                <div class="process-num">03</div>
+                <h3>Build</h3>
+                <p>Train, tune, and validate. Stress-test for fairness, robustness, and edge cases that matter.</p>
+            </div>
+            <div class="process-step reveal" data-reveal="fade-up" data-reveal-delay="240">
+                <div class="process-num">04</div>
+                <h3>Ship</h3>
+                <p>Package as APIs, observe in production, and iterate fast. Models that work, not models that compile.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-card reveal" data-reveal="zoom-in">
+            <div class="cta-glow" aria-hidden="true"></div>
+            <span class="eyebrow eyebrow-light">Let's build</span>
+            <h2 class="cta-title">Have an AI idea worth shipping?</h2>
+            <p class="cta-lede">Whether it's a green-field product or hardening an existing system — I'd love to hear about it.</p>
+            <div class="cta-actions">
+                <a href="#contact" class="btn btn-primary btn-lg magnetic">
+                    <span>Start a conversation</span>
+                    <i class="ph ph-arrow-right" aria-hidden="true"></i>
+                </a>
+                <a href="mailto:gauravpoudel1068@gmail.com" class="btn btn-ghost btn-lg magnetic">
+                    <i class="ph ph-envelope" aria-hidden="true"></i>
+                    <span>Email directly</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section">
+    <div class="container">
+        <div class="section-head reveal" data-reveal="fade-up">
+            <span class="eyebrow">Contact</span>
+            <h2 class="section-title">Let's <span class="text-gradient">talk</span>.</h2>
+            <p class="section-lede">Drop a note below — typical response time is under 24 hours.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-form-wrap reveal" data-reveal="fade-up">
                 {% if request.query_params.get('success') == 'true' %}
-                <div class="alert alert-success alert-dismissible fade show mb-4" role="alert">
-                    Thank you for your message! I'll get back to you soon.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <div class="alert alert-success" role="status">
+                    <i class="ph-fill ph-check-circle"></i>
+                    <div>
+                        <strong>Message sent.</strong>
+                        <span>Thanks for reaching out — I'll be in touch shortly.</span>
+                    </div>
                 </div>
                 {% endif %}
-                <form action="/submit_contact" method="POST">
-                    <div class="mb-3 scroll-reveal delay-3">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
+                <form action="/submit_contact" method="POST" class="contact-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Jane Doe" required autocomplete="name">
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="jane@company.com" required autocomplete="email">
+                        </div>
                     </div>
-                    <div class="mb-3 scroll-reveal delay-4">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
+                    <div class="form-field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, goals, and timeline…" required></textarea>
                     </div>
-                    <div class="mb-3 scroll-reveal delay-5">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-lg scroll-reveal delay-6">
-                        Send Message
+                    <button type="submit" class="btn btn-primary btn-lg magnetic">
+                        <span>Send Message</span>
+                        <i class="ph ph-paper-plane-tilt" aria-hidden="true"></i>
                     </button>
                 </form>
             </div>
-            <div class="col-md-4 scroll-reveal delay-3">
-                <div class="card bg-dark text-white border-0 p-4">
-                    <h5>Get in Touch</h5>
-                    <p><i class="fas fa-envelope me-2"></i> gauravpoudel1068@gmail.com</p>
-                    <p><i class="fas fa-phone me-2"></i> =977 9864271068</p>
-                    <p><i class="fas fa-map-marker-alt me-2"></i> Bhaktapur, Nepal</p>
-                    <hr class="bg-white">
-                    <h5>Follow Me</h5>
-                    <div class="d-flex gap-3">
-                        <a href="https://www.linkedin.com/in/gauravpoudel1068/" class="text-white fs-4"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/Gauravpoudel7" class="text-white fs-4"><i class="fab fa-github"></i></a>
-                        <a href="#" class="text-white fs-4"><i class="fab fa-twitter"></i></a>
+
+            <aside class="contact-aside reveal" data-reveal="fade-up" data-reveal-delay="80">
+                <div class="contact-card">
+                    <h3>Get in touch</h3>
+                    <p class="contact-card-lede">Prefer email or a quick chat? Reach out anywhere below.</p>
+                    <ul class="contact-list">
+                        <li>
+                            <span class="contact-list-icon"><i class="ph-bold ph-envelope"></i></span>
+                            <div>
+                                <span class="contact-list-label">Email</span>
+                                <a href="mailto:gauravpoudel1068@gmail.com">gauravpoudel1068@gmail.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="contact-list-icon"><i class="ph-bold ph-phone"></i></span>
+                            <div>
+                                <span class="contact-list-label">Phone</span>
+                                <a href="tel:+9779864271068">+977 9864271068</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="contact-list-icon"><i class="ph-bold ph-map-pin"></i></span>
+                            <div>
+                                <span class="contact-list-label">Location</span>
+                                <span>Bhaktapur, Nepal · Remote-friendly</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="contact-socials">
+                        <a href="https://www.linkedin.com/in/gauravpoudel1068/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <i class="ph-bold ph-linkedin-logo"></i>
+                        </a>
+                        <a href="https://github.com/Gauravpoudel7" target="_blank" rel="noopener" aria-label="GitHub">
+                            <i class="ph-bold ph-github-logo"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i class="ph-bold ph-twitter-logo"></i>
+                        </a>
                     </div>
                 </div>
-            </div>
+            </aside>
         </div>
     </div>
 </section>
+
 {% endblock %}

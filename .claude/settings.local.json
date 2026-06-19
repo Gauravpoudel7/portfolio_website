@@ -6,7 +6,12 @@
       "Bash(dir *)",
       "Bash(python -c ' *)",
       "Bash(git ls-remote *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "WebFetch(domain:github.com)",
+      "Bash(rm \"app/C:UsersAlpha1Desktoppotfolioappstaticcssstyle.css\" \"app/C:UsersAlpha1Desktoppotfolioappstaticjsmain.js\")",
+      "Bash(rm -rf \"app/C:UsersAlpha1Desktoppotfolioappstaticjs\")",
+      "Bash(python *)",
+      "Bash(pip list *)"
     ]
   }
 }

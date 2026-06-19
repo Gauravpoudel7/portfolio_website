@@ -1,64 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} - AI Engineer Portfolio</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0a0a0f">
+    <meta name="description" content="Gaurav Poudel — AI Engineer crafting intelligent systems, machine learning models, and next-generation AI products.">
+    <meta name="keywords" content="AI Engineer, Machine Learning, Deep Learning, Python, PyTorch, Portfolio">
+    <meta name="author" content="Gaurav Poudel">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ title }} — Gaurav Poudel | AI Engineer">
+    <meta property="og:description" content="Building intelligent systems that change how the world works.">
+    <meta property="og:type" content="website">
+
+    <title>{{ title }} — Gaurav Poudel | AI Engineer</title>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <!-- Modern fonts: Inter (UI), Space Grotesk (display), JetBrains Mono (code) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Phosphor Icons — modern, clean -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/static/css/style.css">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%237c3aed'/%3E%3Cstop offset='100%25' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-family='Space Grotesk, sans-serif' font-size='56' font-weight='700' fill='white' text-anchor='middle'%3EG%3C/text%3E%3C/svg%3E">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#home">AI Engineer Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
+    <!-- Aurora gradient background -->
+    <div class="aurora" aria-hidden="true">
+        <div class="aurora-blob aurora-blob-1"></div>
+        <div class="aurora-blob aurora-blob-2"></div>
+        <div class="aurora-blob aurora-blob-3"></div>
+    </div>
+
+    <!-- Grid background overlay -->
+    <div class="grid-bg" aria-hidden="true"></div>
+
+    <!-- Noise texture -->
+    <div class="noise" aria-hidden="true"></div>
+
+    <!-- Skip link for accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <header class="nav-wrapper" id="nav-wrapper">
+        <nav class="nav container" aria-label="Primary">
+            <a href="#home" class="nav-brand" aria-label="Gaurav Poudel — Home">
+                <span class="nav-brand-mark">
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="brand-grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#7c3aed"/>
+                                <stop offset="1" stop-color="#06b6d4"/>
+                            </linearGradient>
+                        </defs>
+                        <rect width="32" height="32" rx="9" fill="url(#brand-grad)"/>
+                        <path d="M10 22V10h2.6l6.4 8V10H22v12h-2.6L13 14v8h-3z" fill="white"/>
+                    </svg>
+                </span>
+                <span class="nav-brand-text">
+                    <span class="nav-brand-name">Gaurav</span>
+                    <span class="nav-brand-role">AI Engineer</span>
+                </span>
+            </a>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a class="nav-link" href="#home"><span>Home</span></a></li>
+                <li><a class="nav-link" href="#about"><span>About</span></a></li>
+                <li><a class="nav-link" href="#expertise"><span>Expertise</span></a></li>
+                <li><a class="nav-link" href="#work"><span>Work</span></a></li>
+                <li><a class="nav-link" href="#contact"><span>Contact</span></a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" type="button">
+                    <i class="ph ph-moon theme-icon-dark" aria-hidden="true"></i>
+                    <i class="ph ph-sun theme-icon-light" aria-hidden="true"></i>
+                </button>
+                <a href="#contact" class="btn btn-primary btn-sm nav-cta">
+                    <span>Hire Me</span>
+                    <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" type="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
+        </nav>
+    </header>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu-inner">
+            <a class="mobile-link" href="#home">Home</a>
+            <a class="mobile-link" href="#about">About</a>
+            <a class="mobile-link" href="#expertise">Expertise</a>
+            <a class="mobile-link" href="#work">Work</a>
+            <a class="mobile-link" href="#contact">Contact</a>
+            <a href="#contact" class="btn btn-primary btn-lg" style="margin-top:1.5rem;width:100%;justify-content:center;">
+                <span>Hire Me</span>
+                <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+            </a>
         </div>
-    </nav>
+    </div>
 
-
-    <main>
+    <main id="main">
         {% block content %}{% endblock %}
     </main>
 
-    <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container text-center">
-            <p class="mb-0">&copy; {{ 2026 }} AI Engineer Portfolio. All rights reserved.</p>
-            <div class="mt-2">
-                <a href="#" class="text-white me-3"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="text-white me-3"><i class="fab fa-github"></i></a>
-                <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="nav-brand" aria-label="Home">
+                        <span class="nav-brand-mark">
+                            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <rect width="32" height="32" rx="9" fill="url(#brand-grad)"/>
+                                <path d="M10 22V10h2.6l6.4 8V10H22v12h-2.6L13 14v8h-3z" fill="white"/>
+                            </svg>
+                        </span>
+                        <span class="nav-brand-text">
+                            <span class="nav-brand-name">Gaurav Poudel</span>
+                            <span class="nav-brand-role">AI Engineer</span>
+                        </span>
+                    </a>
+                    <p class="footer-tagline">Crafting intelligent systems that push the boundaries of what's possible.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigate</h4>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#work">Work</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <a href="https://github.com/Gauravpoudel7" target="_blank" rel="noopener">GitHub <i class="ph ph-arrow-up-right"></i></a>
+                    <a href="https://www.linkedin.com/in/gauravpoudel1068/" target="_blank" rel="noopener">LinkedIn <i class="ph ph-arrow-up-right"></i></a>
+                    <a href="mailto:gauravpoudel1068@gmail.com">Email <i class="ph ph-arrow-up-right"></i></a>
+                </div>
+                <div class="footer-col">
+                    <h4>Status</h4>
+                    <div class="footer-status">
+                        <span class="status-dot" aria-hidden="true"></span>
+                        <span>Available for new projects</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Gaurav Poudel. All rights reserved.</p>
+                <p class="footer-fineprint">Designed & built with care.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+6X3i1X5Z+9c5V7mZ8K4c5V7mZ8K4c5V7mZ8K4c5V7mZ8K4c5V7mZ8K4c5V7mZ8K4c5V7mZ8K" crossorigin="anonymous"></script>
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top" type="button">
+        <i class="ph ph-arrow-up" aria-hidden="true"></i>
+    </button>
+
     <!-- Custom JS -->
-    <script src="/static/js/main.js"></script>
+    <script src="/static/js/main.js" defer></script>
 </body>
 </html>

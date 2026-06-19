@@ -1,44 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container mt-5">
-    <h2 class="mb-4">About Me</h2>
-    <div class="row">
-        <div class="col-md-4">
-            <img src="/static/img/about.jpg" alt="About Me" class="img-fluid rounded shadow">
+<section class="section">
+    <div class="container">
+        <div class="section-head reveal" data-reveal="fade-up">
+            <span class="eyebrow">About</span>
+            <h1 class="section-title">An engineer who <span class="text-gradient">treats AI as a product</span>.</h1>
+            <p class="section-lede">Scroll to the home page to see the full story, or browse the highlights below.</p>
         </div>
-        <div class="col-md-8">
-           <p class="lead">
-            I am an aspiring AI Engineer with a strong passion for building intelligent systems and solving real-world problems using Machine Learning and Deep Learning. I have worked on several personal and academic AI/ML projects that helped me develop practical skills in model building, data preprocessing, and deployment basics.
-            </p>
-
-            <p>
-            I am continuously learning and improving my expertise in Python, Machine Learning, Deep Learning, and Data Science. I have hands-on experience with libraries such as TensorFlow, PyTorch, and Scikit-learn, and I enjoy applying these tools to build end-to-end projects.
-            </p>
-
-            <p>
-            My focus is on strengthening my skills in AI system design, model optimization, and real-world application development, while actively working on projects that demonstrate my growth as an AI Engineer.
-            </p>
-            <h3 class="mt-4">Skills</h3>
-            <div class="row">
-                <div class="col-md-6">
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-check text-primary me-2"></i> Machine Learning (Supervised, Unsupervised, Reinforcement)</li>
-                        <li><i class="fas fa-check text-primary me-2"></i> Deep Learning (CNNs, RNNs, Transformers)</li>
-                        <li><i class="fas fa-check text-primary me-2"></i> Natural Language Processing</li>
-                        <li><i class="fas fa-check text-primary me-2"></i> Computer Vision</li>
-                    
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-check text-primary me-2"></i> Python, SQL</li>
-                        <li><i class="fas fa-check text-primary me-2"></i> PyTorch, Scikit-learn</li>
-                        <li><i class="fas fa-check text-primary me-2"></i> Streamlit, FastAPI, Django</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="text-center reveal" data-reveal="fade-up" data-reveal-delay="80">
+            <a href="/#about" class="btn btn-primary btn-lg magnetic">
+                <span>Go to About section</span>
+                <i class="ph ph-arrow-right" aria-hidden="true"></i>
+            </a>
         </div>
     </div>
-</div>
+</section>
 {% endblock %}
