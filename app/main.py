@@ -42,14 +42,17 @@ templates.env.cache = None
 
 
 def render(request: Request, name: str, context: dict | None = None) -> HTMLResponse:
-    """Render a template, guaranteeing the ``request`` key is in context.
-
-    Different Starlette versions either auto-inject ``request`` into the
-    template context or require it explicitly — this helper covers both.
-    """
     ctx = dict(context or {})
-    ctx.setdefault("request", request)
-    return templates.TemplateResponse(request, name, ctx)
+    ctx["request"] = request
+
+    try:
+        # New-style Starlette (request is an explicit kwarg)
+        return templates.TemplateResponse(request=request, name=name, context=ctx)
+    except TypeError:
+        # Old-style Starlette: no `request` kwarg exists at all,
+        # so the above raises TypeError, and we fall back here.
+        # ctx already carries "request", satisfying the legacy requirement.
+        return templates.TemplateResponse(name=name, context=ctx)
 
 # In-memory storage for form submissions (for demo; in production use a database)
 form_submissions = []
