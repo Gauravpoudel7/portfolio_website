@@ -13,8 +13,7 @@ from sendgrid.helpers.mail import Mail, Email, To, Content
 dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
 load_dotenv(dotenv_path)
 
-# Debug: print whether email config is loaded (do not print key)
-print(f"[DEBUG] SENDGRID_API_KEY loaded: {bool(os.getenv('SENDGRID_API_KEY'))}")
+# (Removed import-time debug print — see /submit_contact for config diagnostics.)
 
 
 
@@ -80,38 +79,58 @@ async def submit_contact(
     email: str = Form(...),
     message: str = Form(...)
 ):
-    # Create email content
-    from_email = Email(os.getenv('GMAIL_USER', 'your-email@gmail.com'))  # Sender email
-    to_email = To('gauravpoudel1068@gmail.com')  # Recipient email
+    # Read sender/recipient from env. MAIL_FROM must be a verified
+    # Single Sender or domain in SendGrid, otherwise SendGrid rejects it.
+    mail_from = os.getenv('MAIL_FROM') or os.getenv('GMAIL_USER', '')
+    mail_to = os.getenv('MAIL_TO', 'gauravpoudel1068@gmail.com')
+    api_key = os.getenv('SENDGRID_API_KEY')
+
+    if not api_key or not mail_from:
+        print(
+            "[contact] Missing SENDGRID_API_KEY or MAIL_FROM — "
+            f"submission from {email} was NOT sent."
+        )
+        return RedirectResponse(url="/#contact?error=config", status_code=303)
+
+    from_email = Email(mail_from)
+    to_email = To(mail_to)
     subject = f"New Contact Form Submission from {name}"
     content = Content(
         "text/plain",
         f"New contact form submission:\n\nName: {name}\nEmail: {email}\nMessage: {message}"
     )
     mail = Mail(from_email, to_email, subject, content)
+    # Let you hit "Reply" in Gmail and reach the visitor directly.
+    mail.reply_to = Email(email, name=name)
 
     try:
-        # Send via SendGrid
-        sg = sendgrid.SendGridAPIClient(api_key=os.getenv('SENDGRID_API_KEY'))
+        sg = sendgrid.SendGridAPIClient(api_key=api_key)
         response = sg.send(mail)
-        if 200 <= response.status_code < 300:
-            print(f"Contact form submission from {name} sent via SendGrid. Status code: {response.status_code}")
-        else:
-            # Log the error details from SendGrid
-            error_msg = f"SendGrid returned status code {response.status_code}"
-            if hasattr(response, 'body'):
-                error_msg += f": {response.body}"
-            print(error_msg)
-            # Raise an exception to trigger the fallback
-            raise Exception(error_msg)
-    except Exception as e:
-        print(f"Error sending email via SendGrid: {e}")
-        # Fallback: store in memory as before
-        submission = {"name": name, "email": email, "message": message}
-        form_submissions.append(submission)
-        print(f"Stored submission in memory as fallback: {submission}")
 
-    # Redirect to contact section with success message
+        if 200 <= response.status_code < 300:
+            msg_id = response.headers.get("X-Message-Id", "<none>")
+            print(
+                f"[contact] Sent from {name} <{email}>. "
+                f"Status: {response.status_code}, X-Message-Id: {msg_id}"
+            )
+        else:
+            # Hard-fail: surface the SendGrid body so you can see why it bounced.
+            # Decode defensively — body may be bytes, str, or None depending on
+            # the sendgrid client version.
+            raw_body = getattr(response, "body", b"")
+            if isinstance(raw_body, bytes):
+                body = raw_body.decode("utf-8", errors="replace")
+            else:
+                body = str(raw_body) if raw_body is not None else ""
+            print(
+                f"[contact] SendGrid rejected message from {name} <{email}>. "
+                f"Status: {response.status_code}, Body: {body}"
+            )
+            return RedirectResponse(url="/#contact?error=sendgrid", status_code=303)
+    except Exception as e:
+        print(f"[contact] SendGrid exception for {email}: {e!r}")
+        return RedirectResponse(url="/#contact?error=sendgrid", status_code=303)
+
     return RedirectResponse(url="/#contact?success=true", status_code=303)
 
 if __name__ == "__main__":

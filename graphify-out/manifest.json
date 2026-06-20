@@ -1,0 +1,102 @@
+{
+  "C:\\Users\\Alpha1\\Desktop\\potfolio\\.claude\\settings.json": {
+    "mtime": 1781940212.6940172,
+    "ast_hash": "7bf81dca0376bde3a32244b82bc7cbc0",
+    "semantic_hash": "7bf81dca0376bde3a32244b82bc7cbc0"
+  },
+  "C:\\Users\\Alpha1\\Desktop\\potfolio\\.claude\\settings.local.json": {
+    "mtime": 1781941172.399118,
+    "ast_hash": "3feeef9a8df387ee8e330b64a24125f2",
+    "semantic_hash": "3feeef9a8df387ee8e330b64a24125f2"
+  },
+  "C:\\Users\\Alpha1\\Desktop\\potfolio\\app\\__init__.py": {
+    "mtime": 1781456886.874624,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "C:\\Users\\Alpha1\\Desktop\\potfolio\\app\\main.py": {
+    "mtime": 1781880347.1567523,
+    "ast_hash": "2121f61700eafb548f9ad71d60e9e723",
+    "semantic_hash": "2121f61700eafb548f9ad71d60e9e723"
+  },
+  "C:\\Users\\Alpha1\\Desktop\\potfolio\\app\\static\\js\\main.js": {
+    "mtime": 1781849967.2362697,
+    "ast_hash": "c39c2ebc7b979be837b0a98576dc8c1b",
+    "semantic_hash": "c39c2ebc7b979be837b0a98576dc8c1b"
+  },
+  "C:\\Users\\Alpha1\\Desktop\\potfolio\\CLAUDE.md": {
+    "mtime": 1781940212.6930132,
+    "ast_hash": "8a6643a420fdad6bfb583523bc6cef16",
+    "semantic_hash": "8a6643a420fdad6bfb583523bc6cef16"
+  },
+  "C:\\Users\\Alpha1\\Desktop\\potfolio\\README.md": {
+    "mtime": 1781456886.874624,
+    "ast_hash": "2858906860214a01a78bd15669384737",
+    "semantic_hash": "2858906860214a01a78bd15669384737"
+  },
+  "C:\\Users\\Alpha1\\Desktop\\potfolio\\app\\templates\\about.html": {
+    "mtime": 1781849977.0765746,
+    "ast_hash": "2eb21ee6523cfab4b833f9582de9fdd1",
+    "semantic_hash": "2eb21ee6523cfab4b833f9582de9fdd1"
+  },
+  "C:\\Users\\Alpha1\\Desktop\\potfolio\\app\\templates\\base.html": {
+    "mtime": 1781849788.1263096,
+    "ast_hash": "829e50acfa885162f2cb3529acc42e06",
+    "semantic_hash": "829e50acfa885162f2cb3529acc42e06"
+  },
+  "C:\\Users\\Alpha1\\Desktop\\potfolio\\app\\templates\\contact.html": {
+    "mtime": 1781849977.1785722,
+    "ast_hash": "e02c441192c13c28fb53fc454b77dd7c",
+    "semantic_hash": "e02c441192c13c28fb53fc454b77dd7c"
+  },
+  "C:\\Users\\Alpha1\\Desktop\\potfolio\\app\\templates\\index.html": {
+    "mtime": 1781856159.3097003,
+    "ast_hash": "181bfbe384bc76b1d63637cae80bc8bd",
+    "semantic_hash": "181bfbe384bc76b1d63637cae80bc8bd"
+  },
+  "C:\\Users\\Alpha1\\Desktop\\potfolio\\app\\templates\\projects.html": {
+    "mtime": 1781849977.117075,
+    "ast_hash": "ac43cd5830e9a151a622bedaa341a451",
+    "semantic_hash": "ac43cd5830e9a151a622bedaa341a451"
+  },
+  "C:\\Users\\Alpha1\\Desktop\\potfolio\\docker-compose.yml": {
+    "mtime": 1781456886.8836238,
+    "ast_hash": "511a98be3895d52bbd0d9ed6ad64f2e4",
+    "semantic_hash": "511a98be3895d52bbd0d9ed6ad64f2e4"
+  },
+  "C:\\Users\\Alpha1\\Desktop\\potfolio\\requirements.txt": {
+    "mtime": 1781935177.3491488,
+    "ast_hash": "ec082ab8fa5aca752daae9f8129b7ad3",
+    "semantic_hash": "ec082ab8fa5aca752daae9f8129b7ad3"
+  },
+  "C:\\Users\\Alpha1\\Desktop\\potfolio\\Gaurav_Poudel_CV.pdf": {
+    "mtime": 1781456886.874624,
+    "ast_hash": "ccc81beb92b0f38b718d6a76660ed8bc",
+    "semantic_hash": "ccc81beb92b0f38b718d6a76660ed8bc"
+  },
+  "C:\\Users\\Alpha1\\Desktop\\potfolio\\app\\static\\img\\about.jpg": {
+    "mtime": 1781456886.8776238,
+    "ast_hash": "9db25f4fb7c7b345757301b1f8e7a71c",
+    "semantic_hash": "9db25f4fb7c7b345757301b1f8e7a71c"
+  },
+  "C:\\Users\\Alpha1\\Desktop\\potfolio\\app\\static\\img\\profile.jpg": {
+    "mtime": 1781456886.8786247,
+    "ast_hash": "48a9facf481c2eb971e7a5fd7cff236c",
+    "semantic_hash": "48a9facf481c2eb971e7a5fd7cff236c"
+  },
+  "C:\\Users\\Alpha1\\Desktop\\potfolio\\app\\static\\img\\project1.jpg": {
+    "mtime": 1781456886.8786247,
+    "ast_hash": "839a3202743796b2dc5c690181176dad",
+    "semantic_hash": "839a3202743796b2dc5c690181176dad"
+  },
+  "C:\\Users\\Alpha1\\Desktop\\potfolio\\app\\static\\img\\project2.jpg": {
+    "mtime": 1781456886.879625,
+    "ast_hash": "e5f34ac2a49b5314c437c057f93c8123",
+    "semantic_hash": "e5f34ac2a49b5314c437c057f93c8123"
+  },
+  "C:\\Users\\Alpha1\\Desktop\\potfolio\\app\\static\\img\\project3.jpg": {
+    "mtime": 1781456886.8806238,
+    "ast_hash": "6855ec8d5f2c05f8224e5c07bdfd3b23",
+    "semantic_hash": "6855ec8d5f2c05f8224e5c07bdfd3b23"
+  }
+}

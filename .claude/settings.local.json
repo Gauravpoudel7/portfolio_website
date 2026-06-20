@@ -12,7 +12,15 @@
       "Bash(rm -rf \"app/C:UsersAlpha1Desktoppotfolioappstaticjs\")",
       "Bash(python *)",
       "Bash(pip list *)",
-      "WebFetch(domain:raw.githubusercontent.com)"
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(echo \"--- exit $? ---\")",
+      "Bash(graphify export *)",
+      "Bash(awk '/^## God Nodes/,/^## Surprising Connections/' graphify-out/GRAPH_REPORT.md)",
+      "Bash(sed '$d')",
+      "Bash(awk '/^## Surprising Connections/,/^## Suggested Questions/' graphify-out/GRAPH_REPORT.md)",
+      "Bash(awk '/^## Suggested Questions/,0' graphify-out/GRAPH_REPORT.md)",
+      "Bash(graphify hook *)",
+      "Bash(graphify query *)"
     ]
   }
 }

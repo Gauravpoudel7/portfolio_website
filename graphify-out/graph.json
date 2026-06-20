@@ -1,0 +1,1001 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "jinja2_template_inheritance",
+        "label": "Jinja2 Template Inheritance Hierarchy",
+        "nodes": [
+          "templates_base",
+          "templates_index",
+          "templates_about",
+          "templates_projects",
+          "templates_contact"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "C:\\Users\\Alpha1\\Desktop\\potfolio\\app\\templates\\base.html"
+      },
+      {
+        "id": "portfolio_case_studies",
+        "label": "Portfolio Selected Work / Case Studies",
+        "nodes": [
+          "project_neuroscope_ai",
+          "project_gym_calories_predictor",
+          "project_moviegpt"
+        ],
+        "relation": "form",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "C:\\Users\\Alpha1\\Desktop\\potfolio\\app\\templates\\index.html"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "app/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "app_init",
+      "community": 5,
+      "norm_label": "__init__.py"
+    },
+    {
+      "label": "main.py",
+      "file_type": "code",
+      "source_file": "app/main.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "app_main",
+      "community": 1,
+      "norm_label": "main.py"
+    },
+    {
+      "label": "render()",
+      "file_type": "code",
+      "source_file": "app/main.py",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "app_main_render",
+      "community": 1,
+      "norm_label": "render()"
+    },
+    {
+      "label": "Request",
+      "file_type": "code",
+      "source_file": "app/main.py",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "request",
+      "community": 1,
+      "norm_label": "request"
+    },
+    {
+      "label": "HTMLResponse",
+      "file_type": "code",
+      "source_file": "app/main.py",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "htmlresponse",
+      "community": 1,
+      "norm_label": "htmlresponse"
+    },
+    {
+      "label": "home()",
+      "file_type": "code",
+      "source_file": "app/main.py",
+      "source_location": "L60",
+      "_origin": "ast",
+      "id": "app_main_home",
+      "community": 1,
+      "norm_label": "home()"
+    },
+    {
+      "label": "about()",
+      "file_type": "code",
+      "source_file": "app/main.py",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "app_main_about",
+      "community": 1,
+      "norm_label": "about()"
+    },
+    {
+      "label": "projects()",
+      "file_type": "code",
+      "source_file": "app/main.py",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "app_main_projects",
+      "community": 1,
+      "norm_label": "projects()"
+    },
+    {
+      "label": "contact()",
+      "file_type": "code",
+      "source_file": "app/main.py",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "app_main_contact",
+      "community": 1,
+      "norm_label": "contact()"
+    },
+    {
+      "label": "submit_contact()",
+      "file_type": "code",
+      "source_file": "app/main.py",
+      "source_location": "L76",
+      "_origin": "ast",
+      "id": "app_main_submit_contact",
+      "community": 1,
+      "norm_label": "submit_contact()"
+    },
+    {
+      "label": "main.js",
+      "file_type": "code",
+      "source_file": "app/static/js/main.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "js_main",
+      "community": 3,
+      "norm_label": "main.js"
+    },
+    {
+      "label": "closeMobileMenu()",
+      "file_type": "code",
+      "source_file": "app/static/js/main.js",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "js_main_closemobilemenu",
+      "community": 3,
+      "norm_label": "closemobilemenu()"
+    },
+    {
+      "label": "onScroll()",
+      "file_type": "code",
+      "source_file": "app/static/js/main.js",
+      "source_location": "L84",
+      "_origin": "ast",
+      "id": "js_main_onscroll",
+      "community": 3,
+      "norm_label": "onscroll()"
+    },
+    {
+      "label": "updateActiveNav()",
+      "file_type": "code",
+      "source_file": "app/static/js/main.js",
+      "source_location": "L102",
+      "_origin": "ast",
+      "id": "js_main_updateactivenav",
+      "community": 3,
+      "norm_label": "updateactivenav()"
+    },
+    {
+      "label": "animateCount()",
+      "file_type": "code",
+      "source_file": "app/static/js/main.js",
+      "source_location": "L148",
+      "_origin": "ast",
+      "id": "js_main_animatecount",
+      "community": 3,
+      "norm_label": "animatecount()"
+    },
+    {
+      "label": "AI Engineer Portfolio README",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Gaurav Poudel",
+      "contributor": null,
+      "id": "readme_project_documentation",
+      "community": 2,
+      "norm_label": "ai engineer portfolio readme"
+    },
+    {
+      "label": "Graphify Project Instructions",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_graphify_instructions",
+      "community": 2,
+      "norm_label": "graphify project instructions"
+    },
+    {
+      "label": "Gaurav Poudel CV (PDF)",
+      "file_type": "document",
+      "source_file": "Gaurav_Poudel_CV.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Gaurav Poudel",
+      "contributor": null,
+      "id": "gaurav_poudel_cv",
+      "community": 0,
+      "norm_label": "gaurav poudel cv (pdf)"
+    },
+    {
+      "label": "Base Template (nav, footer, head)",
+      "file_type": "code",
+      "source_file": "app/templates/base.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Gaurav Poudel",
+      "contributor": null,
+      "id": "templates_base",
+      "community": 0,
+      "norm_label": "base template (nav, footer, head)"
+    },
+    {
+      "label": "Home Page Template (all sections)",
+      "file_type": "code",
+      "source_file": "app/templates/index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Gaurav Poudel",
+      "contributor": null,
+      "id": "templates_index",
+      "community": 0,
+      "norm_label": "home page template (all sections)"
+    },
+    {
+      "label": "About Page Template",
+      "file_type": "code",
+      "source_file": "app/templates/about.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Gaurav Poudel",
+      "contributor": null,
+      "id": "templates_about",
+      "community": 0,
+      "norm_label": "about page template"
+    },
+    {
+      "label": "Projects Page Template",
+      "file_type": "code",
+      "source_file": "app/templates/projects.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Gaurav Poudel",
+      "contributor": null,
+      "id": "templates_projects",
+      "community": 0,
+      "norm_label": "projects page template"
+    },
+    {
+      "label": "Contact Page Template",
+      "file_type": "code",
+      "source_file": "app/templates/contact.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Gaurav Poudel",
+      "contributor": null,
+      "id": "templates_contact",
+      "community": 0,
+      "norm_label": "contact page template"
+    },
+    {
+      "label": "Docker Compose Web Service (port 8000)",
+      "file_type": "code",
+      "source_file": "docker-compose.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docker_compose_web",
+      "community": 2,
+      "norm_label": "docker compose web service (port 8000)"
+    },
+    {
+      "label": "Python Dependencies Manifest",
+      "file_type": "code",
+      "source_file": "requirements.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "requirements_dependencies",
+      "community": 2,
+      "norm_label": "python dependencies manifest"
+    },
+    {
+      "label": "4-Step Process Workflow (Discover, Design, Build, Ship)",
+      "file_type": "rationale",
+      "source_file": "app/templates/index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Gaurav Poudel",
+      "contributor": null,
+      "rationale": "Pragmatic, iterative workflow tuned for shipping AI that actually delivers; emphasizes discover-design-build-ship cadence for production AI systems.",
+      "id": "portfolio_process_workflow",
+      "community": 0,
+      "norm_label": "4-step process workflow (discover, design, build, ship)"
+    },
+    {
+      "label": "Contact Form Component (POST /submit_contact)",
+      "file_type": "concept",
+      "source_file": "app/templates/index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Gaurav Poudel",
+      "contributor": null,
+      "rationale": "Currently prints submissions to the console per README. Production target: integrate with an email service (SendGrid is already a dependency) or database.",
+      "id": "portfolio_contact_form",
+      "community": 4,
+      "norm_label": "contact form component (post /submit_contact)"
+    },
+    {
+      "label": "NeuroScope AI - Multi-agent Generative AI System",
+      "file_type": "concept",
+      "source_file": "app/templates/index.html",
+      "source_location": null,
+      "source_url": "https://github.com/Gauravpoudel7/NeuroScopeAI",
+      "captured_at": null,
+      "author": "Gaurav Poudel",
+      "contributor": null,
+      "id": "project_neuroscope_ai",
+      "community": 0,
+      "norm_label": "neuroscope ai - multi-agent generative ai system"
+    },
+    {
+      "label": "Gym Calories Burned Predictor (ML Ensemble)",
+      "file_type": "concept",
+      "source_file": "app/templates/index.html",
+      "source_location": null,
+      "source_url": "https://github.com/Gauravpoudel7/Gym_test_model",
+      "captured_at": null,
+      "author": "Gaurav Poudel",
+      "contributor": null,
+      "id": "project_gym_calories_predictor",
+      "community": 0,
+      "norm_label": "gym calories burned predictor (ml ensemble)"
+    },
+    {
+      "label": "MovieGPT - Content-based Movie Recommender (TF-IDF + Cosine Similarity, TMDB)",
+      "file_type": "concept",
+      "source_file": "app/templates/index.html",
+      "source_location": null,
+      "source_url": "https://github.com/Gauravpoudel7/MovieGPT",
+      "captured_at": null,
+      "author": "Gaurav Poudel",
+      "contributor": null,
+      "id": "project_moviegpt",
+      "community": 0,
+      "norm_label": "moviegpt - content-based movie recommender (tf-idf + cosine similarity, tmdb)"
+    },
+    {
+      "label": "FastAPI Web Framework (0.104.1)",
+      "file_type": "concept",
+      "source_file": "requirements.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "tech_fastapi",
+      "community": 2,
+      "norm_label": "fastapi web framework (0.104.1)"
+    },
+    {
+      "label": "Jinja2 Templating Engine (3.1.2)",
+      "file_type": "concept",
+      "source_file": "requirements.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "tech_jinja2",
+      "community": 2,
+      "norm_label": "jinja2 templating engine (3.1.2)"
+    },
+    {
+      "label": "SendGrid Email API Client (6.11.0)",
+      "file_type": "concept",
+      "source_file": "requirements.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "tech_sendgrid",
+      "community": 4,
+      "norm_label": "sendgrid email api client (6.11.0)"
+    },
+    {
+      "label": "Contact Email - gauravpoudel1068@gmail.com",
+      "file_type": "concept",
+      "source_file": "app/templates/index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "contact_email_gaurav",
+      "community": 4,
+      "norm_label": "contact email - gauravpoudel1068@gmail.com"
+    },
+    {
+      "label": "About Section Image",
+      "file_type": "image",
+      "source_file": "app/static/img/about.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "img_about",
+      "community": 6,
+      "norm_label": "about section image"
+    },
+    {
+      "label": "Profile Image",
+      "file_type": "image",
+      "source_file": "app/static/img/profile.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "img_profile",
+      "community": 7,
+      "norm_label": "profile image"
+    },
+    {
+      "label": "Project 1 Portfolio Screenshot",
+      "file_type": "image",
+      "source_file": "app/static/img/project1.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "img_project1",
+      "community": 8,
+      "norm_label": "project 1 portfolio screenshot"
+    },
+    {
+      "label": "Project 2 Portfolio Image",
+      "file_type": "image",
+      "source_file": "app/static/img/project2.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "img_project2",
+      "community": 9,
+      "norm_label": "project 2 portfolio image"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/main.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "app_main",
+      "target": "app_main_about",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/main.py",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "app_main",
+      "target": "app_main_contact",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/main.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "app_main",
+      "target": "app_main_home",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/main.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "app_main",
+      "target": "app_main_projects",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/main.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "app_main",
+      "target": "app_main_render",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/main.py",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "app_main",
+      "target": "app_main_submit_contact",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/main.py",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "app_main_home",
+      "target": "app_main_render",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "app/main.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "app_main_render",
+      "target": "htmlresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "app/main.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "app_main_render",
+      "target": "request",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "app/main.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "app_main_about",
+      "target": "request",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "app/main.py",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "app_main_contact",
+      "target": "request",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "app/main.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "app_main_home",
+      "target": "request",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "app/main.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "app_main_projects",
+      "target": "request",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "app/main.py",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "app_main_submit_contact",
+      "target": "request",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/main.js",
+      "source_location": "L148",
+      "weight": 1.0,
+      "source": "js_main",
+      "target": "js_main_animatecount",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/main.js",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "js_main",
+      "target": "js_main_closemobilemenu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/main.js",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "js_main",
+      "target": "js_main_onscroll",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/main.js",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "js_main",
+      "target": "js_main_updateactivenav",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/static/js/main.js",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "js_main_onscroll",
+      "target": "js_main_updateactivenav",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "CLAUDE.md",
+      "source_location": "both project-level documentation files",
+      "weight": 1.0,
+      "source": "claude_graphify_instructions",
+      "target": "readme_project_documentation"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "Running with Docker Compose section",
+      "weight": 1.0,
+      "source": "readme_project_documentation",
+      "target": "docker_compose_web"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "pip install -r requirements.txt",
+      "weight": 1.0,
+      "source": "readme_project_documentation",
+      "target": "requirements_dependencies"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "Tech Stack -> Backend",
+      "weight": 1.0,
+      "source": "readme_project_documentation",
+      "target": "tech_fastapi"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "Tech Stack -> Templating",
+      "weight": 1.0,
+      "source": "readme_project_documentation",
+      "target": "tech_jinja2"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "Project Structure tree",
+      "weight": 1.0,
+      "source": "readme_project_documentation",
+      "target": "templates_base"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/templates/index.html",
+      "source_location": "Download CV link to OneDrive",
+      "weight": 1.0,
+      "source": "templates_index",
+      "target": "gaurav_poudel_cv"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/templates/about.html",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "templates_about",
+      "target": "templates_base"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/templates/base.html",
+      "source_location": "{% block content %}",
+      "weight": 1.0,
+      "source": "templates_base",
+      "target": "tech_jinja2"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/templates/contact.html",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "templates_contact",
+      "target": "templates_base"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/templates/index.html",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "templates_index",
+      "target": "templates_base"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/templates/projects.html",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "templates_projects",
+      "target": "templates_base"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/templates/about.html",
+      "source_location": "href=\"/#about\"",
+      "weight": 1.0,
+      "source": "templates_about",
+      "target": "templates_index"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/templates/contact.html",
+      "source_location": "href=\"/#contact\"",
+      "weight": 1.0,
+      "source": "templates_contact",
+      "target": "templates_index"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/templates/index.html",
+      "source_location": "form action=\"/submit_contact\"",
+      "weight": 1.0,
+      "source": "templates_index",
+      "target": "portfolio_contact_form"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/templates/index.html",
+      "source_location": "process-grid section (01-04 steps)",
+      "weight": 1.0,
+      "source": "templates_index",
+      "target": "portfolio_process_workflow"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/templates/index.html",
+      "source_location": "https://github.com/Gauravpoudel7/Gym_test_model",
+      "weight": 1.0,
+      "source": "templates_index",
+      "target": "project_gym_calories_predictor"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/templates/index.html",
+      "source_location": "https://github.com/Gauravpoudel7/MovieGPT",
+      "weight": 1.0,
+      "source": "templates_index",
+      "target": "project_moviegpt"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/templates/index.html",
+      "source_location": "https://github.com/Gauravpoudel7/NeuroScopeAI",
+      "weight": 1.0,
+      "source": "templates_index",
+      "target": "project_neuroscope_ai"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/templates/index.html",
+      "source_location": "{% extends %}, {% block %}, {% if %}",
+      "weight": 1.0,
+      "source": "templates_index",
+      "target": "tech_jinja2"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/templates/projects.html",
+      "source_location": "href=\"/#work\"",
+      "weight": 1.0,
+      "source": "templates_projects",
+      "target": "templates_index"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docker-compose.yml",
+      "source_location": "port 8000 matches FastAPI default uvicorn bind",
+      "weight": 1.0,
+      "source": "docker_compose_web",
+      "target": "tech_fastapi"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "requirements.txt",
+      "source_location": "fastapi==0.104.1",
+      "weight": 1.0,
+      "source": "requirements_dependencies",
+      "target": "tech_fastapi"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "requirements.txt",
+      "source_location": "jinja2==3.1.2",
+      "weight": 1.0,
+      "source": "requirements_dependencies",
+      "target": "tech_jinja2"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "requirements.txt",
+      "source_location": "sendgrid==6.11.0",
+      "weight": 1.0,
+      "source": "requirements_dependencies",
+      "target": "tech_sendgrid"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/templates/index.html",
+      "source_location": "mailto:gauravpoudel1068@gmail.com in aside",
+      "weight": 1.0,
+      "source": "portfolio_contact_form",
+      "target": "contact_email_gaurav"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "app/templates/index.html",
+      "source_location": "form action=\"/submit_contact\" + README production note",
+      "weight": 1.0,
+      "source": "portfolio_contact_form",
+      "target": "tech_sendgrid"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "app/templates/index.html",
+      "source_location": "both NLP/AI case studies by same author without direct cross-link",
+      "weight": 1.0,
+      "source": "project_moviegpt",
+      "target": "project_neuroscope_ai"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "jinja2_template_inheritance",
+      "label": "Jinja2 Template Inheritance Hierarchy",
+      "nodes": [
+        "templates_base",
+        "templates_index",
+        "templates_about",
+        "templates_projects",
+        "templates_contact"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Alpha1\\Desktop\\potfolio\\app\\templates\\base.html"
+    },
+    {
+      "id": "portfolio_case_studies",
+      "label": "Portfolio Selected Work / Case Studies",
+      "nodes": [
+        "project_neuroscope_ai",
+        "project_gym_calories_predictor",
+        "project_moviegpt"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Alpha1\\Desktop\\potfolio\\app\\templates\\index.html"
+    }
+  ],
+  "built_at_commit": "f8e574c3736e5aa9a5c86a38c7b0fb47006297f0"
+}
